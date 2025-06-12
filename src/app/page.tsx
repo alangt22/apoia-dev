@@ -1,7 +1,7 @@
 import { FeatureCard } from "@/components/FeatureCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, HandCoins, Heart, Shield, Zap } from "lucide-react";
-import { FaGoogle, FaInstagram } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { signIn } from "@/lib/auth";
 
 export default function Home() {
