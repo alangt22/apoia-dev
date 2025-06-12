@@ -5,13 +5,6 @@ import { FaGoogle, FaInstagram } from "react-icons/fa";
 import { signIn } from "@/lib/auth";
 
 export default function Home() {
-  async function handleRegisterInstagram() {
-    "use server";
-
-    await signIn("instagram", {
-      redirectTo: "/dashboard",
-    });
-  }
   async function handleRegisterGoogle() {
     "use server";
 
@@ -51,17 +44,6 @@ export default function Home() {
               <h1 className="text-4xl py-4 font-bold tracking-tight sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-400">Começe agora</h1>
 
               <div className="pt-4 flex items-center justify-center gap-4">
-                <form action={handleRegisterInstagram}>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="flex items-center bg-gradient-to-r from-pink-500 cursor-pointer to-yellow-500 hover:opacity-70 text-white font-medium px-6 h-12"
-                  >
-                    <FaInstagram className="mr-2 h-5 w-5" />
-                    Instagram
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </form>
 
                 <form action={handleRegisterGoogle}>
                   <Button
