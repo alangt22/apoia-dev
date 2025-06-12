@@ -11,8 +11,8 @@ export async function getLoginOnboardAccount(accountId: string | undefined) {
 
         const accountLink = await stripe.accountLinks.create({
             account: accountId,
-            refresh_url: `${process.env.HOST_URL!}/dashboard`,
-            return_url: `${process.env.HOST_URL!}/dashboard`,
+            refresh_url: "https://apoia-dev-brown.vercel.app/dashboard",
+            return_url: "https://apoia-dev-brown.vercel.app/dashboard",
             type: "account_onboarding",
         });
 

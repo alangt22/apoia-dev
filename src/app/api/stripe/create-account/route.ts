@@ -38,8 +38,8 @@ export const POST = auth(async function POST(request) {
 
         const accountLink = await stripe.accountLinks.create({
             account: account.id,
-            refresh_url: `${process.env.HOST_URL}/dashboard`,
-            return_url: `${process.env.HOST_URL}/dashboard`,
+            refresh_url: "https://apoia-dev-brown.vercel.app/dashboard",
+            return_url: "https://apoia-dev-brown.vercel.app/dashboard",
             type: 'account_onboarding'
         })
 
