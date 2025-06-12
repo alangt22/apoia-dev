@@ -21,8 +21,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       },
     }),
     InstagramProvider({
-      clientId: process.env.INSTAGRAM_CLIENT_ID,
-      clientSecret: process.env.INSTAGRAM_CLIENT_SECRET,
+      clientId: process.env.INSTAGRAM_CLIENT_ID!,
+      clientSecret: process.env.INSTAGRAM_CLIENT_SECRET!,
+      authorization: {
+        params: {
+          scope: "user_profile,user_media",
+        },
+      }, // ou outros scopes que você precisar
     }),
   ],
 });
