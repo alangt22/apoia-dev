@@ -11,7 +11,7 @@ export function CreateAccountButton() {
 
     try {
       const res = await fetch(
-        "/api/stripe/create-account",
+        "https://apoia-dev-brown.vercel.app/api/stripe/create-account",
         {
           method: "POST",
           headers: {

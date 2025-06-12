@@ -57,7 +57,7 @@ export function AvatarProfile({avatarUrl, userId}: AvatarProfileProps) {
             formData.append("file", image)
             formData.append("userId", userId)
 
-            const response = await fetch(`${process.env.NEXTAUTH_URL}/api/image/upload`, {
+            const response = await fetch("https://apoia-dev-brown.vercel.app/api/image/upload", {
                 method: "POST",
                 body: formData
             })

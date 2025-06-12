@@ -37,13 +37,13 @@ export function UrlPreview({ username: slug }: UrlPreviewProps) {
         <div className="flex items-center flex-1 p-2 justify-between text-gray-100">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-2">
               <h3 className="font-bold text-lg">Sua URL:</h3>
-              <Link href={`${process.env.NEXTAUTH_URL}/creator/${username}`} target="_blank">
-                h{`${process.env.NEXTAUTH_URL}/creator/${username}`}
+              <Link href={`https://apoia-dev-brown.vercel.app/creator/${username}`} target="_blank">
+                {`https://apoia-dev-brown.vercel.app/creator/${username}`}
               </Link>      
             </div>
 
             <Link 
-            href={`${process.env.NEXTAUTH_URL}/creator/${username}`}
+            href={`https://apoia-dev-brown.vercel.app/creator/${username}`}
             target="_blank"
             className="bg-blue-500 px-4 py-1 rounded-md hidden md:block"
             >
@@ -62,7 +62,7 @@ export function UrlPreview({ username: slug }: UrlPreviewProps) {
         >
           <div className="flex items-center justify-center w-full">
             
-            <p>{`${process.env.NEXTAUTH_URL}/creator/`}</p>
+            <p>{`https://apoia-dev-brown.vercel.app/creator/`}</p>
             <input
               type="text"
               className="flex-1 outline-none border h-9 border-gray-300 bg-gray-50 text-black rounded-md px-1"
