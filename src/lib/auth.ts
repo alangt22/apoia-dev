@@ -25,9 +25,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       clientSecret: process.env.INSTAGRAM_CLIENT_SECRET!,
       authorization: {
         params: {
-          scope: "user_profile,user_media",
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code",
         },
-      }, // ou outros scopes que você precisar
+      },
     }),
   ],
 });
