@@ -1,9 +1,25 @@
 import { FeatureCard } from "@/components/FeatureCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, HandCoins, Heart, Shield, Zap } from "lucide-react";
-
+import { FaGoogle, FaInstagram } from "react-icons/fa";
+import { signIn } from "@/lib/auth";
 
 export default function Home() {
+  async function handleRegisterInstagram() {
+    "use server";
+
+    await signIn("instagram", {
+      redirectTo: "/dashboard",
+    });
+  }
+  async function handleRegisterGoogle() {
+    "use server";
+
+    await signIn("google", {
+      redirectTo: "/dashboard",
+    });
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-gray-50">
       <header className="container mx-auto py-6 px-4">
@@ -23,29 +39,43 @@ export default function Home() {
                 Plataforma para criadores de conteúdo
               </div>
 
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-400">
+              <h1 className="text-4xl py-4 font-bold tracking-tight sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-400">
                 Monetize seu público de forma descomplicada
               </h1>
 
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Receba doações diretamente dos seus seguidores através de uma página personalizada e elegante, sem
-                complicações.
+                Receba doações diretamente dos seus seguidores através de uma
+                página personalizada e elegante, sem complicações.
               </p>
 
-              <div className="pt-4">
-                <form>
+              <h1 className="text-4xl py-4 font-bold tracking-tight sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-400">Começe agora</h1>
+
+              <div className="pt-4 flex items-center justify-center gap-4">
+                <form action={handleRegisterInstagram}>
                   <Button
                     type="submit"
                     size="lg"
-                    className="bg-amber-500 hover:bg-amber-600 text-white font-medium px-8 h-12"
+                    className="flex items-center bg-gradient-to-r from-pink-500 cursor-pointer to-yellow-500 hover:opacity-70 text-white font-medium px-6 h-12"
                   >
-                    Começar agora
+                    <FaInstagram className="mr-2 h-5 w-5" />
+                    Instagram
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </form>
+
+                <form action={handleRegisterGoogle}>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="flex items-center bg-red-500 hover:bg-red-400 cursor-pointer text-white font-medium px-6 h-12"
+                  >
+                    <FaGoogle className="mr-2 h-5 w-5" />
+                    Google
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </form>
               </div>
             </div>
-
           </div>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
