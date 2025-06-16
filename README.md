@@ -1,6 +1,6 @@
-# 💡 Apoia.dev
+# 💡 ApoiaDEV
 
-**Apoia.dev** é uma plataforma pensada para criadores de conteúdo que desejam receber apoio financeiro de forma simples e personalizada. Com uma interface moderna e intuitiva, o projeto permite que cada criador crie sua própria página de doações com identidade visual única.
+**ApoiaDEV** é uma plataforma pensada para criadores de conteúdo que desejam receber apoio financeiro de forma simples e personalizada. Com uma interface moderna e intuitiva, o projeto permite que cada criador crie sua própria página de doações com identidade visual única.
 
 ## ✨ Funcionalidades
 
